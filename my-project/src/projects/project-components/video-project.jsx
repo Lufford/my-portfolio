@@ -66,7 +66,7 @@ export default function VideoProject() {
 
     // 
 
-    const listVideos = fetchedVids.map(video =>
+    const listVideos = fetchedVids?.map(video =>
         <li key={video.id} className="m-1.5">
             <div className="m-3 border-2 rounded p-4 size-150 bg-slate-700">
                 <h2 className="mb-3.5 font-bold">{video.title}</h2>
