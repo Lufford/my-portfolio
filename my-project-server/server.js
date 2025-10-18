@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const Videos = require("./Video");
@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-dotenv.config();
+// dotenv.config();
 
 mongoose
     .connect(process.env.MONGODB_URI)
