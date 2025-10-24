@@ -1,7 +1,11 @@
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <>
-        <h1>Home</h1>
+            <div className="flex-nowrap text-center">
+                <h1>Home</h1>
+                <h2>Some text</h2>
+            </div>
+
         </>
     );
 }
