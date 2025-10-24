@@ -3,7 +3,6 @@ import {useEffect, useState } from "react";
 
 export default function VideoProject() {
     const [ytLink, setYTLink] = useState("");
-    const [vidId, setVidId] = useState({});
     const [fetchedVids, setFetchedVids] = useState([]);
     const handleInput = (e) => {
         setYTLink(e.target.value);
@@ -82,7 +81,7 @@ export default function VideoProject() {
                 </div>
             </div>
 
-            <ul className="flex flex-wrap list-none items-center ml-50">{listVideos}</ul>
+            <ul className="min-h-screen flex flex-wrap list-none items-center ml-100">{listVideos}</ul>
         </>
     );
 }
