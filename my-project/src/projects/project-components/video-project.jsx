@@ -25,7 +25,7 @@ export default function VideoProject() {
 
     const postData = async (id) => {
         try {
-            const response = await fetch("http://localhost:3000/video-project", {
+            const response = await fetch("https://my-server-gewa.onrender.com/video-project", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({"id": id})
@@ -40,7 +40,7 @@ export default function VideoProject() {
 
     const fetchDBData = async () => {
         try {
-            const response = await fetch("http://localhost:3000/video-project")
+            const response = await fetch("https://my-server-gewa.onrender.com/video-project")
             if (!response.ok) {
                 throw new Error("no response");
             }
@@ -74,16 +74,15 @@ export default function VideoProject() {
 
     return (
         <>
-            <div className="flex-nowrap bg-slate-600 place-content-center">
-                <h1>Recommend me a Video</h1>
-                <div className="flex-nowrap" >
-                    <input type="text" onChange={handleInput} value={ytLink} placeholder="Enter youtube link" className="border-1 p-1.5 m-0.5" />
-                    <button className="p-1.5 bg-slate-900 border-1 rounded" onClick={grabAndPost}>Ok</button>
+            <div className="flex flex-col gap-4 p-4 items-center justify-center">
+                <h1>Recommend a Video</h1>
+                <div className="flex items-center gap-3" >
+                    <input type="text" onChange={handleInput} value={ytLink} placeholder="Enter Youtube Link" autoFocus className="border-1 rounded p-1.5 m-0.5" />
+                    <button className="p-1.5 bg-slate-900 border-1 rounded" onClick={grabAndPost}>Send</button>
                 </div>
-
             </div>
 
-            <ul className="flex flex-wrap list-none items-center">{listVideos}</ul>
+            <ul className="flex flex-wrap list-none items-center ml-50">{listVideos}</ul>
         </>
     );
 }
