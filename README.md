@@ -1,2 +1,3 @@
-# my-portfolio
-My personal porfolio with some projects
+# Fullstack Portfolio website
+Frontend my-project built with React.
+Backend my-project-server built with Express.
